@@ -10,7 +10,7 @@ runs:
     shell: bash
 
   - name: Build Bamboo cli wallet
-    run: dotnet publish cypnode --configuration Release --self-contained -r win-x64 -p:PublishReadyToRun=true --output install\windows\BambooWalletInstaller\bin\BambooWalletCliFiles
+    run: dotnet publish cli --configuration Release --self-contained -r win-x64 -p:PublishReadyToRun=true --output install\windows\BambooWalletInstaller\bin\BambooWalletCliFiles
     shell: powershell
 
   - name: Harvest Bamboo cli wallet
