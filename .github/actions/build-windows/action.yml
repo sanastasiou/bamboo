@@ -14,7 +14,7 @@ runs:
     shell: powershell
 
   - name: Harvest Bamboo cli wallet
-    run: heat.exe dir install\windows\BambooWalletInstaller\bin\BambooWalletCliFiles -sreg -dr Bamboo -cg BambooWalletInstallationFilesGroup -gg -g1 -sf -srd -var "var.BambooWalletInstallationDirectory" -t install\windows\BambooWalletInstaller\remove_exe.xslt  -out install\windows\BambooWalletInstaller\wallet_files.wxs
+    run: heat.exe -v dir install\windows\BambooWalletInstaller\bin\BambooWalletCliFiles -sreg -dr Bamboo -cg BambooWalletInstallationFilesGroup -gg -g1 -sf -srd -var "var.BambooWalletInstallationDirectory" -t install\windows\BambooWalletInstaller\remove_exe.xslt  -out install\windows\BambooWalletInstaller\wallet_files.wxs
     shell: cmd
 
   - name: Build installer
